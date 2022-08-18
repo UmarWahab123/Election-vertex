@@ -731,3 +731,12 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         Route::get('/database',                             'SettingController@getTableSchema')->name('database');
     });
 });
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::get('/all-parties',                             'PartyNameController@all_parties')->name('allparties');
+        Route::get('/add-parties/{id?}',                             'PartyNameController@add_parties')->name('addparties');
+        Route::post('/saveparties',                             'PartyNameController@saveparties')->name('saveparties');
+        Route::get('/deleteparty/{id}',                             'PartyNameController@deleteparty')->name('deleteparty');
+    
+    });
+});
