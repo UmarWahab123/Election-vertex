@@ -1,0 +1,154 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    font-family: "Gilroy", sans-serif;
+    overflow-x: hidden;
+    height: 100%;}
+.election-logo{
+    text-align: center;
+}
+.election-logo img{
+    width: 300px;
+    height: 300px;
+}
+
+.sms_field img {
+    width: 22px;
+    height: 22px;
+    /* display: flex; */
+    right: 2px;
+    top: 38px;
+    position: absolute;
+    margin: auto;
+    background: #ffc107;
+    padding: 7px;
+    border-radius: 20px;
+}
+.sms_field {
+    padding: 10px 0px;
+    position: relative;
+
+}
+section {
+    padding: 0px 70px;
+}
+@media(max-width:500px){
+    section{
+        padding: 0px 10px;
+    }
+}
+.sms_field label {
+
+    font-weight: medium;
+    padding: 0px 4px;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 500;
+
+}
+.sms_input {
+
+    width: 100%;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    font-size: 15px;
+    color: #8e8e8e;
+    border: 2px solid #e1e1e1;
+    position: relative;
+    outline: none;
+    margin-top: 7px;
+}
+.election-main-search{
+    position: relative;
+}
+.sms_field p {
+    margin: 3px 0px;
+    font-size: 15px;
+    color: #7d7d7d;
+}
+.tree-detail{
+    background: #75b82d;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.tree-detail h5 {
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+input#SearchCard {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #ffc107;
+}
+.name-image {
+
+    justify-content: space-between;
+    align-items: center;
+}
+.name-image img{
+    width: 56px;
+    height: 56px;
+}
+.name-image p{
+    font-size: 20px;
+}
+.tree-detail p{
+    margin: 4px;
+}
+.sms-screen {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 17px;
+}
+.btn-primary-sms {
+    background: #03c6fd;
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 13px;
+    /* line-height: 36px; */
+    color: black;
+    cursor: pointer;
+    border: 0;
+    height: 35px;
+    margin-bottom: 4px;
+    width: auto;
+    padding: 0px 60px;
+    /* margin-top: 2rem; */
+}
+.v_parchi_inr {
+    overflow: scroll;
+}
+.family-tree {
+    font-size: 18px;
+    font-weight: bold italic;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-bottom: 11px;
+}
+.download-btn{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search {
+    position: absolute;
+    left: 94%;
+    top: 53px;
+}
+@media(max-width: 590px){
+    .search {
+        position: absolute;
+        left: 79% ;
+        top: 52px;
+
+    }
+    .main .container-fluid {
+        padding: 0 10px !important;
+    }
+}

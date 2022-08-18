@@ -1,0 +1,129 @@
+body{
+    margin: auto;
+    font-family: 'Gilroy', sans-serif;
+}
+.election-main-class{
+    background-color: #2f89fc;
+    display: flex;
+    height: 104px;
+}
+.election-child-class{
+    margin: auto 0px;
+}
+.election-child-class img{
+    margin: auto 10px;
+    background: white;
+    display: block;
+    padding: 10px 17px 10px 12px;
+    border-radius: 50%;
+    width: 10.61px;
+    height: 17.81px;
+    flex-direction: column-reverse;
+}
+.election-main-class p {
+    margin: auto;
+    font-size: 22px;
+    font-weight: bolder;
+    color: white;
+    margin-right: 60px;
+}
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #fff;
+    border-right: none;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+   
+  }
+  .search-content{
+       padding: 15px;
+  }
+  .search-content p{
+      font-size: 20px;
+      font-weight: medium;
+      margin: 0px;
+      color: white;
+     
+  }
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 54px;
+    height: 49px;
+    border: 1px solid #2f89fc;
+    background: #2f89fc;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .wrap{
+      padding: 10px !important;
+  }
+  
+  .main-search-class{
+      background-color: #229944;
+      height: 170px;
+  }
+  .searchButton img{
+      width: 21px;
+      height: 21px;
+  }
+  .wrap p{
+      font-size: 13px;
+      margin: 0px;
+      color: white;
+      padding-top: 3px;
+  }
+  .voter-detail p{
+      font-size: 20px;
+      margin: 0px;
+      font-weight: medium;
+  }
+  .voter-detail h4{
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0px 5px 0px;
+  }
+  .main-voter-class{
+      border: 1px solid #dfdede;
+      background-color: #f9f8f8;
+    
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .voter-class{
+      padding: 15px;
+     
+     
+  }
+  .btn-primary {
+    background: #2F89FC;
+    border-radius: 5px;
+    font-weight: medium;
+    font-size: 17px;
+    line-height: 36px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: 0;
+    height: 35px;
+    margin-top: 1rem;
+    width: 133px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-tree{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreatePollingDetailsImagesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('polling_details_images', function (Blueprint $table) {
+            $table->id();
+            $table->integer('polling_detail_id')->nullable();
+            $table->longText('name_pic')->nullable();
+            $table->longText('address_pic')->nullable();
+            $table->text('name_url')->nullable();
+            $table->text('address_url')->nullable();
+            $table->text('firebase_url')->nullable();
+            $table->text('url_id')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('polling_details_images');
+    }
+}

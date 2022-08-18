@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "one-call-59851",
+    "private_key_id": "d0b462cc2d16e7dffdba7069ed9cc12112265637",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCxwj8YrxDUX4Tb\nyH0EAQGbYleEF8sSlzC1n8uC/trdzIRgvbUnr9gKmiWJ3s5v//XrTjpdxrYeJqQr\n0avV598QqHkeD9XodDIzI4ca0PIUhR92hgoTeFcCg5ek1cw0II43RvdjfU9RrIu1\nv+/1L4lI0ZblmT0B0MlCLYEQCM26+KJh2kPmcDcdlH6v5Z4PKcyPiFXl1TxYObU4\nulKlZkDpviJ6YybQxg5rSP+wONXiJUXas5Bt+d+aPJnwYO6jJrhxaKm6ppwxsNcv\nT9YrDG3eXmJrGI21dWsQqCJ6bYla4FfBTC5RnfDbuUgyiU2/YX4LYaJ06u00MKxP\nHwpw2z/9AgMBAAECggEAAXbH1cB1W0ZpHfVGAE8wz/KMpXgbsky/+DL3dl36d/qr\n+W7+i7PhS98OoZbN7PK2+AfmJ6kQDWoEjp7UszeMaQL2MmbvfFFeq3imr3Qalkwt\nYOjEMvpZ/xmN2WvwWVqOSUrClVVuHo5U/Tt2MrcAQrMFMuFi9P2e9rZQuozUAu7v\nQ+TIMyR4779F8cKxjc0xqV7b0VWOBX0ufBnNayb5Ci62q9PeOQZl+tlcQIFg4XR/\n7mX05LM/99MjLTW8WVjgSnOTGjlqzu1tvBQDJ9BZ59C55LgFx53UOWi+gkeBK0f2\n26iTtHqQ6PPeZQJddwPXQzQI/7KDAm9yLIhpal86MQKBgQDkCk1iI3qUQHqvKIHQ\njisKox5HUyj9tg784pvAyOJVmNk4o9qmJRTiTikMz/TuqkVBAQptICV1NouMIKE2\nxWh6jPEnuh2IVb6Q3bXMpQWZmaP9zuwcc5lR6S2JIUD0owCXFAZM9mgwy9iw8+Or\nAfZ4HeeJxKoURnapADtvpo2wzQKBgQDHjbdJbjdoLyw3ns1NcmlfW76/ZJu2fYzK\n7+Q48+0AtEHTaHp8sJ1eRYP6Ddqp/qksYjEfMrohjMlcYSlW1XRsdHqQrpeHL6pX\noJKxgYSIELsBY+QdAREtFIWqSw65k+IO4IcKtkOtFNgB5mx+3nk9KXPVs+yP6Zj/\nZ7+zjlsL8QKBgDuZFbBYZWjpkSbGB2diQI1/JCKv8T6dnj0pXFt+JOkKEXtkF3jk\nqBidJM1cbD8T8RWUGA19IU0I/F+bB4cxAKVGwKAJXD6NakiiKSla16PVK67hrYOi\nEqf9sRDtx/Qnxbe2XA8xNvnJzNAybYX79VZfOmwfIfQ6ljiE/wOnG9DhAoGAbXeZ\nNwfmDxnpiK1tc/GySiQ69CUNokMnK+AC8xckSQGZJo6muqXr/d3mcxKMhDp1tSo8\nRh/+qQ7hGvMVyVOY5THUVm/gIcGNETq9nfAtsrJy02Vnql1+fZtHY85+ymCMXpre\nmYq4f0by47/yfnouSdXmfDGSMLP1QQ45xBbwbRECgYBcD9yE/e23k4/mFESC0Z7i\n4v5i/rnlEdUHBM9x37X2/QikNKsCf67hm13NxDF3Jx/BLdQoMMZySeFDgdm0y1IA\nbaLWo2CUIGVpcNOVIQcr9u1ImuG+Gri/IDEVaOqn6E7Us1EnIy2eJu0ftxhxwUn1\nKQJrKGo0WW+U/FItHUo0+g==\n-----END PRIVATE KEY-----\n",
+    "client_email": "onecall-cloudvision@one-call-59851.iam.gserviceaccount.com",
+    "client_id": "113876766030124632361",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/onecall-cloudvision%40one-call-59851.iam.gserviceaccount.com"
+}
