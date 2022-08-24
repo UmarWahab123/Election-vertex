@@ -164,7 +164,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         Meneses\LaravelMpdf\LaravelMpdfServiceProvider::class,
 
-
+        OwenIt\Auditing\AuditingServiceProvider::class,
         /*
          * Package Service Providers...
          */

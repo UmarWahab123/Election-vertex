@@ -524,3 +524,65 @@ $factory->define(App\Models\S3uploadingMember::class, static function (Faker\Gen
         
     ];
 });
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Product::class, static function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->sentence,
+        'slug' => $faker->unique()->slug,
+        'perex' => $faker->text(),
+        'published_at' => $faker->date(),
+        'enabled' => $faker->boolean(),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Post::class, static function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->sentence,
+        'slug' => $faker->unique()->slug,
+        'perex' => $faker->text(),
+        'published_at' => $faker->date(),
+        'enabled' => $faker->boolean(),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\ClientSetting::class, static function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->sentence,
+        'status' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\ClientsSetting::class, static function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->sentence,
+        'status' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\AllParty::class, static function (Faker\Generator $faker) {
+    return [
+        'party_name' => $faker->text(),
+        'party_image_url' => $faker->text(),
+        'created_by' => $faker->text(),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});

@@ -53,7 +53,7 @@ class AdminUsersController extends Controller
 
         $this->middleware(function ($request, $next) {
             $this->user = Auth::user();
-
+            // dd($this->user);
             if (Auth::user()->forbidden == 1){
                 abort(404);
             }

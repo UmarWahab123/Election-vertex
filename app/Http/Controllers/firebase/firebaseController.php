@@ -481,8 +481,6 @@ class firebaseController extends Controller
 
         }
 
-
-
         Mail::send('email.conclusionmail', $dataa, function ($message) use ($dataa) {
             $message->to($dataa["email"], $dataa["client_name"])
                 ->subject($dataa["subject"])

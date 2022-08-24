@@ -36,6 +36,7 @@
     function filterReports(start_date, end_date){
       var start_date = $('#start_date').val();
        var end_date = $('#end_date').val();
+       var token = $('input[name=_token]').val();
        var formdata=$('#filter-form').serialize();
        if(start_date == '' && end_date == ''){
         var d = new Date(); 
@@ -45,8 +46,9 @@
         var url = "{{ url('admin/reports/filterProcessing') }}/"+start_date+"/"+end_date;
        console.log('url',url);
        $.ajax({
-            url: url,
+            headers:{'X-CSRF-TOKEN': token},
             type: 'GET',
+            url: url,
             data: formdata,
             success: function(data){
               console.log('filterdata', data.response);

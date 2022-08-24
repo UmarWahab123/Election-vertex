@@ -419,7 +419,7 @@ class MobileViewController extends Controller
     {
         $username=$request->username;
         $password=$request->password;
-//dd($username);
+// dd($username);
 
         $user=DB::table('vertexuser')->where('username',$username)->where('password',$password)->where('status','ACTIVE')->first();
         if ($user)

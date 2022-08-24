@@ -25,6 +25,7 @@ class User extends Model
 
     ];
 
+
     public function tag()
     {
         return $this->hasMany(Tag::class);

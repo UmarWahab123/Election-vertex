@@ -19395,9 +19395,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/election/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /var/www/html/election/resources/sass/admin/admin.scss */"./resources/sass/admin/admin.scss");
-module.exports = __webpack_require__(/*! /var/www/html/election/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! Z:\xampp\htdocs\onecallapp\election-vertex\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! Z:\xampp\htdocs\onecallapp\election-vertex\resources\sass\admin\admin.scss */"./resources/sass/admin/admin.scss");
+module.exports = __webpack_require__(/*! Z:\xampp\htdocs\onecallapp\election-vertex\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })
