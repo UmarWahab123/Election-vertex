@@ -23,7 +23,7 @@
                 type:"get",
                 // url:"https://vertex.plabesk.com/api/cron_cloudinary_api?token=$2y$10$X6Y0dBD072OdaOlEUMh4ue.6osLcDqs7Knjh191LRlA69vcsBJT72",
                 // url:"https://vertex.plabesk.com/api/generate_blockcode_report?token=$2y$10$X6Y0dBD072OdaOlEUMh4ue.6osLcDqs7Knjh191LRlA69vcsBJT72",
-                url:"https://vertex.plabesk.com/api/download_pdf_cron",
+                url:"https://vertex.plabesk.com/api/usman/dev-test",
                 // url:"https://vertex.plabesk.com/api/cron_getFamilyAndSerialNo?token=$2y$10$X6Y0dBD072OdaOlEUMh4ue.6osLcDqs7Knjh191LRlA69vcsBJT72",
                 datatype:"json",
                 success:function(data)

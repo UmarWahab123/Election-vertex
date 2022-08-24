@@ -23,7 +23,8 @@ use League\Flysystem\Filesystem;
 use ZipArchive;
 use File;
 use DB;
-putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/one-call-59851-40f314185b47.json');
+use App\Exports\ElectionData;
+use Maatwebsite\Excel\Facades\Excel;
 
 class TestController extends Controller
 {
@@ -368,15 +369,27 @@ class TestController extends Controller
 
     public function testRaw(Request $request){
 
-//        $cnic = '42401-2356428-0';
-//        $detail = PollingDetail::where('cnic', $cnic)->with('voter_phone','SchemeAddress')->first();
-//        $parchiImageLogo="https://flyclipart.com/thumbs/pti-pakistan-imrankhan-imran-khan-bat-logo-ptilogo-pti-election-sign-1172092.png";
-//        $parchiImages=ParchiImage::where('block_code',408010205)->where('Party','PTI')->first();
-//        $pdf=PDF::loadView('email.singleVoterParchiPdf',compact('parchiImages','detail','parchiImageLogo'));
-//        return $pdf->download('voterlist.pdf');
-//
-//
-//   dd('ss');
+        $block_code = ElectionSector::where('sector', 'LIKE', "%Na-133%")
+            ->where('status','Excel')
+             ->get();
+
+
+
+        $data = [];
+        foreach ($block_code as $b)
+        {
+            $b->status = 'EXCEL';
+            $b->save();
+             return Excel::download(new ElectionData($b->block_code), '259190302.xlsx');
+
+
+        }
+dd($data);
+
+
+
+
+        dd('hello');
 
 
 

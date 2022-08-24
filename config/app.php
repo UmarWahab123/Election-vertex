@@ -178,6 +178,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+
 
     ],
 
@@ -234,7 +236,9 @@ return [
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'MPDF' => Meneses\LaravelMpdf\Facades\LaravelMpdf::class,
         'Helper' => App\Helpers\Helper::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
-],
+
+    ],
 
 ];
