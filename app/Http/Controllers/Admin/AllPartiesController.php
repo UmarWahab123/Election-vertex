@@ -19,6 +19,7 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use Auth;
 
 class AllPartiesController extends Controller
 {
@@ -37,7 +38,7 @@ class AllPartiesController extends Controller
             $request,
 
             // set columns to query
-            ['id'],
+            ['id','party_name', 'party_image_url', 'created_by'],
 
             // set columns to searchIn
             ['id', 'party_name', 'party_image_url', 'created_by']
@@ -78,6 +79,8 @@ class AllPartiesController extends Controller
     {
         // Sanitize input
         $sanitized = $request->getSanitized();
+        $sanitized['created_by'] = Auth::user()->id;
+        
 
         // Store the AllParty
         $allParty = AllParty::create($sanitized);
