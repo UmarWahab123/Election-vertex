@@ -53,7 +53,7 @@ class AdminUsersController extends Controller
 
         $this->middleware(function ($request, $next) {
             $this->user = Auth::user();
-
+            // dd($this->user);
             if (Auth::user()->forbidden == 1){
                 abort(404);
             }
@@ -182,7 +182,6 @@ class AdminUsersController extends Controller
 
     public function index(IndexAdminUser $request)
     {
-
             $data = AdminListing::create(AdminUser::class)->processRequestAndGet(
                 $request,
                 ['id', 'first_name', 'last_name', 'email', 'phone', 'activated', 'forbidden', 'language', 'last_login_at'],

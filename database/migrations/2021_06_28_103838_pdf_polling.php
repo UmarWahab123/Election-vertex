@@ -20,8 +20,10 @@ class PdfPolling extends Migration
             $table->string('record_type')->nullable();
             $table->string('status')->nullable();
             $table->string('cron_status')->nullable();
+            $table->string('type')->nullable();
+            $table->string('party_type')->nullable();
+            $table->string('meta')->nullable();
             $table->timestamps();
-
         });
     }
 

@@ -1,3 +1,4 @@
+
 <div class="sidebar">
     <nav class="sidebar-nav">
         <ul class="nav">
@@ -73,6 +74,8 @@
 {{--                <li class="nav-item"><a class="nav-link" href="{{ url('admin/election/searchIdCardReport') }}"><i class="nav-icon icon-compass"></i>Search Idcard</a></li>--}}
 {{--                <li class="nav-item"><a class="nav-link" href="{{ url('admin/mobileView/azzure/search') }}"><i class="nav-icon icon-puzzle"></i>Azzure Search</a></li>--}}
                 <li class="nav-item"><a class="nav-link" href="{{ url('admin/curl-switches') }}"><i class="nav-icon icon-user"></i>Curl Switches</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('admin/all-parties') }}"><i class="nav-icon icon-umbrella"></i>All Parties</a></li>
+
 
             @endcan
 

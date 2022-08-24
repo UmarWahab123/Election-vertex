@@ -56,7 +56,6 @@ class RolesController extends Controller
             // set columns to searchIn
             ['id', 'name', 'guard_name']
         );
-
         if ($request->ajax()) {
             if ($request->has('bulk')) {
                 return [

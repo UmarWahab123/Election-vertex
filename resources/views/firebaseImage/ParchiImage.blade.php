@@ -18,16 +18,12 @@
                         <h4>Party Name</h4>
 {{--                        <input type="text" name="party" placeholder="Party_Name" class="form-control" required>--}}
                          <select name="party" placeholder="Party_Name" class="form-control" required>
-                             <option value="PMLN" selected="">PMLN</option>
-                             <option value="PTI">PTI</option>
-                             <option value="PPP">PPP</option>
-                             <option value="TLP">TLP</option>
-                             <option value="JUI">JUI</option>
-                             <option value="MQM">MQM</option>
-                             <option value="AllahHoAkbar">AllahHoAkbar</option>
-                             <option value="JI">JI</option>
-                             <option value="AwamiDostPanel">AwamiDostPanel</option>
 
+                            @foreach($data['parties'] as $key=>$value)
+
+                            <option value="{{$value->party_name}}">{{$value->party_name}}</option>
+
+                            @endforeach
 
                          </select>
                     </div>
@@ -59,7 +55,6 @@
                     </div>
                     <br>
 
-
                 </center>
             </div>
             <center>
@@ -69,7 +64,7 @@
                 </div>
 
                 <div class="mt-5">
-                    <button type="submit" class="btn btn-primary">Download</button>
+                    <button type="submit" class="btn btn-primary">Upload</button>
                 </div>
 
             </center>

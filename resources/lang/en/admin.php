@@ -674,5 +674,133 @@ return [
         ],
     ],
 
+    'product' => [
+        'title' => 'Products',
+
+        'actions' => [
+            'index' => 'Products',
+            'create' => 'New Product',
+            'edit' => 'Edit :name',
+            'will_be_published' => 'Product will be published at',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'title' => 'Title',
+            'slug' => 'Slug',
+            'perex' => 'Perex',
+            'published_at' => 'Published at',
+            'enabled' => 'Enabled',
+            
+        ],
+    ],
+
+    'post' => [
+        'title' => 'Posts',
+
+        'actions' => [
+            'index' => 'Posts',
+            'create' => 'New Post',
+            'edit' => 'Edit :name',
+            'will_be_published' => 'Post will be published at',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'title' => 'Title',
+            'slug' => 'Slug',
+            'perex' => 'Perex',
+            'published_at' => 'Published at',
+            'enabled' => 'Enabled',
+            
+        ],
+    ],
+
+    'client-setting' => [
+        'title' => 'Client Settings',
+
+        'actions' => [
+            'index' => 'Client Settings',
+            'create' => 'New Client Setting',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'user_id' => 'User',
+            'status' => 'Status',
+            
+        ],
+    ],
+
+    'client-setting' => [
+        'title' => 'Client Setting',
+
+        'actions' => [
+            'index' => 'Client Setting',
+            'create' => 'New Client Setting',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'user_id' => 'User',
+            'status' => 'Status',
+            
+        ],
+    ],
+
+    'clients-setting' => [
+        'title' => 'Clients Setting',
+
+        'actions' => [
+            'index' => 'Clients Setting',
+            'create' => 'New Clients Setting',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'user_id' => 'User',
+            'status' => 'Status',
+            
+        ],
+    ],
+
+    'client-setting' => [
+        'title' => 'Client Setting',
+
+        'actions' => [
+            'index' => 'Client Setting',
+            'create' => 'New Client Setting',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'user_id' => 'User',
+            'status' => 'Status',
+            
+        ],
+    ],
+
+    'all-party' => [
+        'title' => 'All Parties',
+
+        'actions' => [
+            'index' => 'All Parties',
+            'create' => 'New All Party',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'party_name' => 'Party name',
+            'party_image_url' => 'Party image url',
+            'created_by' => 'Created by',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

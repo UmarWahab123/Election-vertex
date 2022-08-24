@@ -729,5 +729,38 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
     Route::prefix('admin')->namespace('App\Http\Controllers\General')->name('admin/')->group(static function() {
         Route::get('/database',                             'SettingController@getTableSchema')->name('database');
+        Route::post('/savepayment',                             'SettingController@savePayment')->name('savepayment');
+        Route::get('/payments',                             'SettingController@payments')->name('payments');
+        Route::post('/updatestatus',                             'SettingController@updatePaymentStatus')->name('updatestatus');
+        Route::get('/deletepayments/{id}',                             'SettingController@deletePayments')->name('deletePayments');
+        Route::get('/paymentpopup/{user_id}',                             'SettingController@paymentPopup')->name('paymentPopup');
+        Route::get('/export',                             'SettingController@export')->name('export');
+
+
+    });
+});
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Test')->name('admin/')->group(static function() {
+        Route::get('/pdfVoterParchi/{blockcode}/{type}',                             'TestController@voterParchi')->name('voterParchi');
+    });
+});
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::get('/payment-receipt',                             'PaymentPopupController@index')->name('index');
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('all-parties')->name('all-parties/')->group(static function() {
+            Route::get('/',                                             'AllPartiesController@index')->name('index');
+            Route::get('/create',                                       'AllPartiesController@create')->name('create');
+            Route::post('/',                                            'AllPartiesController@store')->name('store');
+            Route::get('/{allParty}/edit',                              'AllPartiesController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'AllPartiesController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{allParty}',                                  'AllPartiesController@update')->name('update');
+            Route::delete('/{allParty}',                                'AllPartiesController@destroy')->name('destroy');
+        });
     });
 });

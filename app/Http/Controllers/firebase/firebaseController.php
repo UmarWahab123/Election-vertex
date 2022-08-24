@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Models\PaymentGateway;
 use App\Models\UsersChat;
 use App\Models\User;
+use App\Models\PartyName;
 use App\Models\UserMessage;
 use App\Models\BusinessProfile;
 use App\Models\FirebaseUrl;
@@ -134,7 +135,8 @@ class firebaseController extends Controller
     public function ParchiImage()
     {
         $electionsector= ElectionSector::groupBy('sector')->get();
-        return view('firebaseImage.ParchiImage',compact('electionsector'));
+        $data['parties'] = PartyName::get();
+        return view('firebaseImage.ParchiImage',compact('electionsector','data'));
     }
 
     public function parchiimgupload(Request $request)
@@ -478,8 +480,6 @@ class firebaseController extends Controller
 
 
         }
-
-
 
         Mail::send('email.conclusionmail', $dataa, function ($message) use ($dataa) {
             $message->to($dataa["email"], $dataa["client_name"])
