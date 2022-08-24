@@ -11,10 +11,15 @@
 <div class="modal" id="myModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-      <div class="alert alert-warning">
-        <strong>Upload Payment Receipt</strong>
-      </div>
         <div class="modal-body">
+
+      <div class="alert alert-danger text-center" role="alert">
+        <h4 class="text-danger">Billing Error</h4>
+      </div>
+      <p>Please pay your bills to use more services.</p>
+      <p>Amount Pending <strong>1000</strong> Rs</p>
+      <p>Please upload payment receipt to use your account.</p><br>
+
             {{-- <p>Your status is inactive please upload your payment receipt</p><br><br> --}}
             <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
             <div class="row">
@@ -30,7 +35,7 @@
               <div class="col-md-12">
                   <div class="form-group">
                       <label>Amount</label>
-                      <input type="number" class="form-control" id="amount" placeholder="Enter amount"  name="amount" required>
+                      <input type="number" class="form-control" id="amount" placeholder="Please enter amount you are paying "  name="amount" required>
                     </div>
               </div>
           </div>
