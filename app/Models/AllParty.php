@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class AllParty extends Model
 {
+    // protected $table = 'all_parties';
+
     protected $fillable = [
         'party_name',
         'party_image_url',

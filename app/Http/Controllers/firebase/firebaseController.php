@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 use App\Models\PaymentGateway;
 use App\Models\UsersChat;
 use App\Models\User;
-use App\Models\PartyName;
+use App\Models\AllParty;
 use App\Models\UserMessage;
 use App\Models\BusinessProfile;
 use App\Models\FirebaseUrl;
@@ -135,7 +135,7 @@ class firebaseController extends Controller
     public function ParchiImage()
     {
         $electionsector= ElectionSector::groupBy('sector')->get();
-        $data['parties'] = PartyName::get();
+        $data['parties'] = AllParty::get();
         return view('firebaseImage.ParchiImage',compact('electionsector','data'));
     }
 

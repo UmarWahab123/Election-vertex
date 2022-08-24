@@ -50,6 +50,7 @@
                                         </th>
 
                                         <th is='sortable' :column="'id'">{{ trans('admin.all-party.columns.id') }}</th>
+                                        <th is='sortable' :column="'party_name'">{{ trans('admin.all-party.columns.party_name') }}</th>
 
                                         <th></th>
                                     </tr>
@@ -74,6 +75,8 @@
                                         </td>
 
                                     <td>@{{ item.id }}</td>
+                                    <td>@{{ item.party_name }}</td>
+
                                         
                                         <td>
                                             <div class="row no-gutters">
