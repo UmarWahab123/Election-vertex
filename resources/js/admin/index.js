@@ -35,3 +35,4 @@ import './business-account';
 import './payment-gateway';
 import './s3uploading-member';
 import './all-party';
+import './auditable';

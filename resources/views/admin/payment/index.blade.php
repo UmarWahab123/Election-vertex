@@ -82,48 +82,31 @@
        </div>
     </div>
     <div class="modal fade" id="confirm-approve" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
-
-        <div class="modal-dialog" role="document">
-    
-            <div class="modal-content">
-               
-                <div class="modal-header">
-    
-                    <h5 class="modal-title" id="exampleModalLabel">Confirm Save</h5>
-    
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    
-                        <span aria-hidden="true">×</span>
-    
-                    </button>
-    
-                </div>
-    
-            <div class="modal-body">
-                <form action="{{ url('admin/updatestatus') }}" method="post">
-                   {{ csrf_field() }}
-                    <input class="form-control" name="id" type="hidden" value="">
-                    <input class="form-control" name="user_id" type="hidden" value="">
-                    <input type="hidden" name="status" value=""><br>
-                    <div class="alert alert-success">
-                     <strong>Are you sure you want to change the status?</strong>
-                   </div>
-                <div class="modal-footer">
-    
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    
-                    <button type="Submit" class="btn btn-primary">Confrim</button>
-    
-                </div>
-                </form>
-                </div>
-    
-    
-            </div>
-    
-        </div>
-    
-    </div>
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header bg-vimeo">
+                  <h5 class="modal-title" id="exampleModalLabel">Confirm Update</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+               Are you sure you want to update this ?
+               <form action="{{ url('admin/updatestatus') }}" method="post">
+                  {{ csrf_field() }}
+                   <input class="form-control" name="id" type="hidden" value="">
+                   <input class="form-control" name="user_id" type="hidden" value="">
+                   <input type="hidden" name="status" value=""><br>
+                   
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary bg-gray-700 text-white" data-dismiss="modal">Close</button>
+                     <button type="Submit" class="btn btn-success btn-pill text-white">Confrim</button>
+                 </div>
+               </form>            
+              </div>
+          </div>
+      </div>
+  </div>
  </section>
  
 @endsection

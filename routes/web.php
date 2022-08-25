@@ -480,6 +480,7 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
             Route::post('/bulk-destroy',                                'ParchiImageController@bulkDestroy')->name('bulk-destroy');
             Route::post('/{parchiImage}',                               'ParchiImageController@update')->name('update');
             Route::delete('/{parchiImage}',                             'ParchiImageController@destroy')->name('destroy');
+
         });
     });
 });
@@ -733,9 +734,8 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         Route::get('/payments',                             'SettingController@payments')->name('payments');
         Route::post('/updatestatus',                             'SettingController@updatePaymentStatus')->name('updatestatus');
         Route::get('/deletepayments/{id}',                             'SettingController@deletePayments')->name('deletePayments');
-        Route::get('/paymentpopup/{user_id}',                             'SettingController@paymentPopup')->name('paymentPopup');
         Route::get('/export',                             'SettingController@export')->name('export');
-
+        Route::get('/paymentpopup/{user_id}',                             'SettingController@paymentPopup')->name('paymentPopup');
 
     });
 });
@@ -746,7 +746,7 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
 });
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
     Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
-        Route::get('/payment-receipt',                             'PaymentPopupController@index')->name('index');
+        // Route::get('/payment-receipt',                             'PaymentPopupController@index')->name('index');
     });
 });
 
@@ -761,6 +761,21 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
             Route::post('/bulk-destroy',                                'AllPartiesController@bulkDestroy')->name('bulk-destroy');
             Route::post('/{allParty}',                                  'AllPartiesController@update')->name('update');
             Route::delete('/{allParty}',                                'AllPartiesController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('auditables')->name('auditables/')->group(static function() {
+            Route::get('/',                                             'AuditableController@index')->name('index');
+            Route::get('/create',                                       'AuditableController@create')->name('create');
+            Route::post('/',                                            'AuditableController@store')->name('store');
+            Route::get('/{auditable}/edit',                             'AuditableController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'AuditableController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{auditable}',                                 'AuditableController@update')->name('update');
+            Route::delete('/{auditable}',                               'AuditableController@destroy')->name('destroy');
         });
     });
 });

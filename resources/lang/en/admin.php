@@ -802,5 +802,25 @@ return [
         ],
     ],
 
+    'auditable' => [
+        'title' => 'Auditable',
+
+        'actions' => [
+            'index' => 'Auditable',
+            'create' => 'New Auditable',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            'email' => 'Email',
+            'phone' => 'Phone',
+            'city' => 'City',
+            'status' => 'Status',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

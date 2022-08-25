@@ -586,3 +586,17 @@ $factory->define(App\Models\AllParty::class, static function (Faker\Generator $f
         
     ];
 });
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Auditable::class, static function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->text(),
+        'email' => $faker->text(),
+        'phone' => $faker->text(),
+        'city' => $faker->text(),
+        'status' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});

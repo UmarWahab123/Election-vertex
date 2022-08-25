@@ -20,12 +20,22 @@ class SettingController extends Controller
    }
    public function savePayment(Request $request)
     {
-        $id = $request->id;
-        $data = $request->all();
-        $data['receipt_url']=$request->firbase_url;
-        unset($data['firbase_url']);
-        $affected_rows =  ClientPayment::create($data);
-        return redirect()->back();
+        $id = $request->user_id;
+        $checkPayment = ClientPayment::where('user_id',$id)->first();
+        if(!empty($checkPayment)){
+          $response = 'Your Payment Receipt has been already uploaded.';
+          $response = array('status'=>0,'response' =>$response);
+          return $response;
+          return false;
+        }else{
+          $data = $request->all();
+          $data['receipt_url']=$request->firbase_url;
+          unset($data['firbase_url']);
+          $affected_rows =  ClientPayment::create($data);
+          $response = 'Your Payment Receipt has been Successufully Uploaded Your account will be Activated after Verification !';
+          $response = array('status'=>1,'response' =>$response);
+          return $response;
+        }
     }
     public function payments()
     {
@@ -66,7 +76,8 @@ class SettingController extends Controller
      {
        $admin_user = AdminUser::where('id', $user_id)->first();
        $response = $admin_user->forbidden;
-       $response = array('response' =>$response);
+       $modal = view('admin.payment.create')->render();
+       $response = array('response' =>$response,'modal'=>$modal);
        return $response;
      }
      public function export(){

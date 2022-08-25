@@ -7,9 +7,7 @@
     {{--Text Logo--}}
 
 </a>
-<input type="hidden" value="{{Auth::user()->id}}" id="userid" name="user_id">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
+{{-- <script>
  $(document).ready(function(){
      var user_id = $('#userid').val();
        $.ajax({
@@ -28,4 +26,4 @@
         });
     });
    
-</script>
+</script> --}}

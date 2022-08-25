@@ -1,23 +1,10 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
-<form action="{{url('/admin/savepayment')}}" method="POST" class="formdata" enctype="multipart/form-data">
+ <form id="paymentForm" class="formdata" enctype="multipart/form-data">
     {{ csrf_field() }}
-<div class="modal" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-
       <div class="alert alert-danger text-center" role="alert">
         <h4 class="text-danger">Billing Error</h4>
       </div>
       <p>Please pay your bills to use more services.</p>
-      <p>Amount Pending <strong>1000</strong> Rs</p>
+      <p>Amount Pending <strong class="pending-amount" pending-amount="1000">1000</strong> Rs</p>
       <p>Please upload payment receipt to use your account.</p><br>
 
             {{-- <p>Your status is inactive please upload your payment receipt</p><br><br> --}}
@@ -25,7 +12,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label>Payment Receipt</label>
+                        <label class="text-monospace">Payment Receipt</label>
                         <input type="file" class="form-control" id="imageUploadTrail" placeholder="Choose image" accept=".jpg, .jpeg, .png" name="receipt_url" required>
                         <input type="hidden" class="form-control" id="image-upload" placeholder="Choose image" accept=".jpg, .jpeg, .png" name="firbase_url" required>
                       </div>
@@ -34,36 +21,20 @@
             <div class="row">
               <div class="col-md-12">
                   <div class="form-group">
-                      <label>Amount</label>
-                      <input type="number" class="form-control" id="amount" placeholder="Please enter amount you are paying "  name="amount" required>
+                      <label class="text-monospace">Amount</label>
+                      <input type="number" class="form-control" id="amount" placeholder="Please enter amount you are paying" name="amount" required>
+                      <span class="errortype text-danger d-none"></span>
+                      {{-- <span class="checkPayment text-info d-none"></span> --}}
                     </div>
               </div>
           </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary upload-btn btn-square w-25">Upload</button>
+          </div>
         </div>
-        @if(session('message'))
-        <p class="alert alert-warning">
-        {{session('message')}}</p>
-        @endif
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary btn-payment">Upload</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function(){
-    $("#myModal").modal('show');
-
-});
-</script>
-
-<script type="text/javascript">
-  const handleImageOnChange = () => {
+    </form>
+      <script type="Text/Javascript">
+      const handleImageOnChange = () => {
       $(".imagex2").on("change", e => {
           console.log(e.target.files);
           const files = e.target.files;
@@ -87,10 +58,8 @@
       measurementId: "G-0LF3SPVK62"
   };
   $(document).ready(function () {
-
       firebase.initializeApp(firebaseConfig);
       handleImageOnChange();
-
       $("#imageUploadTrail").on("change", e => {
           console.log($(".image").val());
           console.log(e.target.files);
@@ -141,4 +110,5 @@
           )
       })
   }
-</script>
+  </script>
+      
