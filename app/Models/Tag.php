@@ -3,9 +3,12 @@
 namespace App\Models;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class Tag extends Model
+class Tag extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
+
     protected $fillable = [
         'business_id',
         'tag_name',

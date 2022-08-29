@@ -5,10 +5,13 @@ namespace App\Models;
 use App\Http\Controllers\VisitingCardController;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\VisitingCardImage;
+use OwenIt\Auditing\Contracts\Auditable;
 
 
-class VisitingCard extends Model
+class VisitingCard extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
+
     protected $fillable = [
         'user_id',
         'name',

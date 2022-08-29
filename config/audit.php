@@ -28,6 +28,7 @@ return [
         'morph_prefix' => 'user',
         'guards'       => [
             'web',
+            'admin',
             'api'
         ],
         'resolver'     => OwenIt\Auditing\Resolvers\UserResolver::class

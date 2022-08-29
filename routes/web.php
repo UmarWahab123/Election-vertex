@@ -723,7 +723,7 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
     Route::prefix('admin')->namespace('App\Http\Controllers\Reports')->name('admin/')->group(static function() {
         Route::prefix('reports')->group(static function() {
             Route::get('/data',                             'ReportController@reports')->name('sareports');
-            Route::get('/filterProcessing/{start_date}/{end_date}',                             'ReportController@filterProcessing')->name('filterProcessingsData');
+            Route::get('/filterProcessing/{start_date}/{end_date}',                             'ReportController@filterProcessing')->name('filterProcessings');
         });
     });
 });
@@ -742,11 +742,6 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
     Route::prefix('admin')->namespace('App\Http\Controllers\Test')->name('admin/')->group(static function() {
         Route::get('/pdfVoterParchi/{blockcode}/{type}',                             'TestController@voterParchi')->name('voterParchi');
-    });
-});
-Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
-    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
-        // Route::get('/payment-receipt',                             'PaymentPopupController@index')->name('index');
     });
 });
 
@@ -777,5 +772,19 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
             Route::post('/{auditable}',                                 'AuditableController@update')->name('update');
             Route::delete('/{auditable}',                               'AuditableController@destroy')->name('destroy');
         });
+    });
+});
+
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::get('audits-form',                             'AuditsController@auditForm')->name('auditForm');
+        Route::get('search',                             'AuditsController@search')->name('search');
+    });
+});
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::get('get-blockcode',                             'BlockCodeController@getBlockCode')->name('getblockCode');
+        Route::get('filter-blockcode/{sector}',                             'BlockCodeController@filterBlockCode')->name('filterblockcode');
+        Route::get('export-blockcode/{blockCode}',                             'BlockCodeController@blockcodeExport')->name('blockcodeexport');
     });
 });

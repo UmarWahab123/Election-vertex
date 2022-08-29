@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
-class ElectionSetting extends Model
+use OwenIt\Auditing\Contracts\Auditable;
+class ElectionSetting extends Model implements Auditable
 {
+
+    use \OwenIt\Auditing\Auditable;
     protected $table = 'election_setting';
 
     protected $fillable = [

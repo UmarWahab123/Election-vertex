@@ -4,9 +4,12 @@ namespace App\Models;
 
 use App\Http\Controllers\Admin\FirebaseUrlsController;
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class PollingDetail extends Model
+class PollingDetail extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
+
     protected $table = 'polling_details';
 
     protected $fillable = [

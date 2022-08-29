@@ -4,8 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Brackets\AdminAuth\Models\AdminUser;
-class ClientPayment extends Model
+use OwenIt\Auditing\Contracts\Auditable;
+
+class ClientPayment extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
+
     protected $table = 'client_payments';
 
     protected $fillable = [

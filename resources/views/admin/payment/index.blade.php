@@ -3,7 +3,7 @@
 @section('title', trans('admin.admin-user.actions.index'))
 
 @section('body')
-
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
 <section id="basic-datatable">
     <div class="row">
        <div class="col-12">
@@ -17,7 +17,7 @@
              </div>
             
              <div class="card-datatable p-2">
-                <table class="table dynamic_table table-condensed">
+                <table class="table dynamic_table table-condensed" id="tableID">
                    <thead>
                       <tr>
                          <th>Sr No</th>
@@ -33,7 +33,7 @@
                       @foreach($data['results'] as $key=>$row)
                       <tr>
                          <td>{{$key+1}}</td>
-                         <td>{{$row->clientuser->first_name}} {{$row->clientuser->last_name}}</td>
+                         <td>{{isset($row->clientuser->first_name) ? $row->clientuser->first_name :'' }} {{isset($row->clientuser->last_name) ? $row->clientuser->last_name :''}}</td>
                          <td><img src="{{$row->receipt_url}}" width="60" height="60"></td>
                          <td>{{$row->amount}}</td>
                          <td>
@@ -111,6 +111,7 @@
  
 @endsection
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" defer ></script>
 <script>
  $(document).ready(function(){
   $(document).on("click","#approved-status-btn",function(){
@@ -130,4 +131,10 @@
 		$("input[name=status]").val(status);
 	});
 });
+$(document).ready(function() {
+                /* marksscored is sorted in descending */
+                $('#tableID').DataTable({
+                    order: [[ 4, 'desc' ]]
+                });  
+            });
 </script>

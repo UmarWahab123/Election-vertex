@@ -4,9 +4,13 @@ namespace App\Models;
 
 use Brackets\AdminAuth\Models\AdminUser;
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class CandidateWard extends Model
+
+class CandidateWard extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
+
     protected $table = 'candidate_ward';
 
     protected $fillable = [

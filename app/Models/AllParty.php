@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
-class AllParty extends Model
+use OwenIt\Auditing\Contracts\Auditable;
+class AllParty extends Model implements Auditable
 {
-    // protected $table = 'all_parties';
+    use \OwenIt\Auditing\Auditable;
+    protected $table = 'all_parties';
 
     protected $fillable = [
         'party_name',

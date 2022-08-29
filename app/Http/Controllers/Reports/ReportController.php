@@ -125,6 +125,10 @@ class ReportController extends Controller
         array("y" => $mail_pending, "label" => 'Blockcode Files Pending Mail'),
         array("y" => $mail_middle_state, "label" => 'Blockcode Files In Processing Mail'),
     );
-    return view('reports.graph.components.processing-graph',compact('processingDataset'));
+    // dd($processingDataset);
+    // $response = view('reports.graph.components.processing-graph', compact('processingDataset'))->render();
+    $response = array('response' =>$processingDataset);
+    return json_encode($response);
+    // return view('reports.graph.components.processing-graph',compact('processingDataset'));
    }
 }

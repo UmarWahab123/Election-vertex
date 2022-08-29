@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class CreateCnicDetailTable extends Model
+class CreateCnicDetailTable extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
+
     protected $table = 'cnic_detail';
 
     protected $fillable = [ 'cnic_number','family_number','name','father_name','address','polling_station'

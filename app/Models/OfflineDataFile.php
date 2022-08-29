@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class OfflineDataFile extends Model
+class OfflineDataFile extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
+
     Protected $table = 'offline_data_files';
 
     protected $fillable = [
