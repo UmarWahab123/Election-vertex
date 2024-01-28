@@ -105,7 +105,7 @@
                       .then(function (downloadURL) {
                           $('#progress-bar').css('display','none');
                           resolve(downloadURL);
-                      })
+                 })
               }
           )
       })
